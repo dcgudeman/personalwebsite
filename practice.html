@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title>gudeman.co</title>
+  <style>
+    html {
+      background: url("background.jpg") no-repeat center center fixed;
+      background-color: #cccccc;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .origin {
+      position: relative;
+      height: 250px;
+      width: 250px;
+      background-color: #cccccc;
+      margin: 15px auto;
+      border-radius: 125px;
+    }
+
+    .element {
+      position: absolute;
+      height: 130px;
+      width: 130px;
+      border-radius: 65px;
+      background-color: black;
+      left: 60px;
+      top: 60px;
+      transition: 0.2s ease-in-out;
+    }
+
+    .element:hover {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      left: 25px;
+      top: 25px;
+    }
+
+    .caption {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      /*width: 6em;*/
+      top: 100%;
+      text-align: center;
+      color: white;
+      transition: 0.2s ease-in-out;
+    }
+
+    .element:hover .caption {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      /*width: 6em;*/
+      top: 70%;
+      text-align: center;
+      color: red;
+
+    }
+
+
+    .degree0 {
+      -webkit-transform: rotate(0deg) translate(300px) rotate(0deg);
+    }
+
+    .degree45 {
+      -webkit-transform: rotate(45deg) translate(300px) rotate(-45deg);
+    }
+
+    .degree90 {
+      -webkit-transform: rotate(90deg) translate(300px) rotate(-90deg);
+    }
+
+    .degree135 {
+      -webkit-transform: rotate(135deg) translate(300px) rotate(-135deg);
+    }
+
+    .degree180 {
+      -webkit-transform: rotate(180deg) translate(300px) rotate(-180deg);
+    }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div class="origin">
+  <div class="element degree0"><div class="caption">GitHub</div></div>
+  <div class="element degree45"><div class="caption">LinkedIn</div></div>
+  <div class="element degree90"><div class="caption">Resume</div></div>
+  <div class="element degree135"><div class="caption">TheBestBlogEver</div></div>
+  <div class="element degree180"><div class="caption">Unbeatable <br> Tic-Tac-Toe</div></div>
+</div>
+
+
+</body>
+</html>
