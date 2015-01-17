@@ -24,6 +24,11 @@
       border-radius: 125px;
     }
 
+    .first {
+
+
+    }
+
     .element {
       position: absolute;
       height: 130px;
@@ -33,6 +38,9 @@
       left: 60px;
       top: 60px;
       transition: 0.2s ease-in-out;
+
+
+      /*animation-iteration-count: 1;*/
     }
 
     .element:hover {
@@ -68,26 +76,96 @@
 
     .degree0 {
       -webkit-transform: rotate(0deg) translate(300px) rotate(0deg);
+      -webkit-animation-name: swingA;
+      -webkit-animation-duration: 2s;
     }
 
     .degree45 {
       -webkit-transform: rotate(45deg) translate(300px) rotate(-45deg);
+      -webkit-animation-name: swingB;
+      -webkit-animation-duration: 2s;
     }
 
     .degree90 {
       -webkit-transform: rotate(90deg) translate(300px) rotate(-90deg);
+      -webkit-animation-name: swingC;
+      -webkit-animation-duration: 2s;
     }
 
     .degree135 {
       -webkit-transform: rotate(135deg) translate(300px) rotate(-135deg);
+      -webkit-animation-name: swingD;
+      -webkit-animation-duration: 2s;
     }
 
     .degree180 {
       -webkit-transform: rotate(180deg) translate(300px) rotate(-180deg);
+      -webkit-animation-name: swingE;
+      -webkit-animation-duration: 2s;
     }
 
 
+  @-webkit-keyframes swingA {
+    from {
 
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(0deg) translate(300px) rotate(0deg);
+    }
+  }
+
+  @-webkit-keyframes swingB {
+    from {
+
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(45deg) translate(300px) rotate(-45deg);
+    }
+  }
+
+  @-webkit-keyframes swingC {
+    from {
+
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(90deg) translate(300px) rotate(-90deg);
+    }
+  }
+
+
+  @-webkit-keyframes swingD {
+    from {
+
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(135deg) translate(300px) rotate(-135deg);
+    }
+  }
+
+
+  @-webkit-keyframes swingE {
+    from {
+
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(180deg) translate(300px) rotate(-180deg);
+    }
+  }
 
 
 
