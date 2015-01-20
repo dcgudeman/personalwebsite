@@ -1,69 +1,499 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <script src="app.js"></script>
+  <meta charset="UTF-8">
   <title>gudeman.co</title>
-  <style type="text/css">
+  <style>
+
+  @media only screen and (min-device-width : 481px) {
+
+
     html {
-      background: url("background.jpg") no-repeat center center fixed;
+      background: url("background-2560x1600.jpg") no-repeat center center fixed;
       background-color: #cccccc;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
     }
-    body {
-      background-color: rgba(255, 255, 255, 0);
+
+    #origin {
+      position: relative;
+      height: 250px;
+      width: 250px;
+      background-color: #cccccc;
+      margin: 15px auto;
+      border-radius: 125px;
+      background: url(headshotbw.png) no-repeat center;
+      background-size: 300px;
+      cursor:pointer;
     }
 
-    #ttt {
-      background: url(1.png) no-repeat center;
-      background-size: 300px;
 
+    .element {
+      position: absolute;
+      height: 130px;
+      width: 130px;
+      border-radius: 65px;
+      background-color: black;
+      left: 60px;
+      top: 60px;
+      transition: 0.2s ease-in-out;
     }
-    #tbbe {
-      background: url(2.png) no-repeat center;
-      background-size: 300px;
-    }
-    #rsm {
-      background: url(3.png) no-repeat center;
-      background-size: 300px;
 
-    }
-    .circular {
+    .element:hover {
       width: 200px;
       height: 200px;
-      border-radius: 150px;
-      -webkit-border-radius: 150px;
-      -moz-border-radius: 150px;
+      border-radius: 100px;
+      left: 25px;
+      top: 25px;
+    }
+
+    .caption {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      top: 100%;
+      text-align: center;
+      color: white;
+      font-family: 'Oswald', sans-serif;
       transition: 0.2s ease-in-out;
-      display: inline-block;
+    }
+
+    .element:hover .caption {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      top: 70%;
+      text-align: center;
+      opacity: 0;
+
+    }
+
+
+    .degree0 {
+      background: url(github.gif) no-repeat center;
+      background-size: 200px;
+      -webkit-transform: rotate(0deg) translate(300px) rotate(0deg);
+      -webkit-animation-name: swingA;
+      -webkit-animation-duration: 2s;
+      -moz-transform: rotate(0deg) translate(300px) rotate(0deg);
+      -moz-animation-name: swingA;
+      -moz-animation-duration: 2s;
+    }
+
+    .degree45 {
+      background: url(linkedin.png) no-repeat center;
+      background-size: 200px;
+      -webkit-transform: rotate(45deg) translate(300px) rotate(-45deg);
+      -webkit-animation-name: swingB;
+      -webkit-animation-duration: 2s;
+      -moz-transform: rotate(45deg) translate(300px) rotate(-45deg);
+      -moz-animation-name: swingB;
+      -moz-animation-duration: 2s;
+    }
+
+    .degree90 {
+      background: url(3.png) no-repeat center;
+      background-size: 200px;
+      -webkit-transform: rotate(90deg) translate(300px) rotate(-90deg);
+      -webkit-animation-name: swingC;
+      -webkit-animation-duration: 2s;
+      -moz-transform: rotate(90deg) translate(300px) rotate(-90deg);
+      -moz-animation-name: swingC;
+      -moz-animation-duration: 2s;
+    }
+
+    .degree135 {
+      background: url(2.png) no-repeat center;
+      background-size: 200px;
+      -webkit-transform: rotate(135deg) translate(300px) rotate(-135deg);
+      -webkit-animation-name: swingD;
+      -webkit-animation-duration: 2s;
+      -moz-transform: rotate(135deg) translate(300px) rotate(-135deg);
+      -moz-animation-name: swingD;
+      -moz-animation-duration: 2s;
+    }
+
+    .degree180 {
+      background: url(1.png) no-repeat center;
+      background-size: 200px;
+      -webkit-transform: rotate(180deg) translate(300px) rotate(-180deg);
+      -webkit-animation-name: swingE;
+      -webkit-animation-duration: 2s;
+      -moz-transform: rotate(180deg) translate(300px) rotate(-180deg);
+      -moz-animation-name: swingE;
+      -moz-animation-duration: 2s;
+    }
+
+
+  @-webkit-keyframes swingA {
+    from {
+
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(0deg) translate(300px) rotate(0deg);
+    }
+  }
+
+  @-webkit-keyframes swingB {
+    from {
+
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(45deg) translate(300px) rotate(-45deg);
+    }
+  }
+
+  @-webkit-keyframes swingC {
+    from {
+
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(90deg) translate(300px) rotate(-90deg);
+    }
+  }
+
+
+  @-webkit-keyframes swingD {
+    from {
+
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(135deg) translate(300px) rotate(-135deg);
+    }
+  }
+
+
+  @-webkit-keyframes swingE {
+    from {
+
+      -webkit-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -webkit-transform: rotate(180deg) translate(300px) rotate(-180deg);
+    }
+  }
+
+
+    @-moz-keyframes swingA {
+    from {
+
+      -moz-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+
+      -moz-transform: rotate(0deg) translate(300px) rotate(0deg);
+    }
+  }
+
+  @-moz-keyframes swingB {
+    from {
+
+      -moz-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -moz-transform: rotate(45deg) translate(300px) rotate(-45deg);
+    }
+  }
+
+  @-moz-keyframes swingC {
+    from {
+
+      -moz-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -moz-transform: rotate(90deg) translate(300px) rotate(-90deg);
+    }
+  }
+
+
+  @-moz-keyframes swingD {
+    from {
+
+      -moz-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -moz-transform: rotate(135deg) translate(300px) rotate(-135deg);
+    }
+  }
+
+
+  @-moz-keyframes swingE {
+    from {
+
+      -moz-transform: rotate(-45deg) translate(212px,-212px) rotate(45deg);
+
+    }
+
+    to {
+      -moz-transform: rotate(180deg) translate(300px) rotate(-180deg);
+
+    }
+  }
+
+
+  .swingAround {
+
+    -webkit-animation-name: swingAround;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-duration: 2s;
+    -moz-animation-name: swingAround;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-duration: 2s;
+
+
+  }
+
+
+  @-webkit-keyframes swingAround {
+    from {
+
+    }
+
+    to {
+      -webkit-transform: rotate(0deg) translate(0px,-300px) rotate(-0deg);
+    }
+  }
+
+  @-moz-keyframes swingAround {
+    from {
+
+    }
+
+    to {
+      -moz-transform: rotate(0deg) translate(0px,-300px) rotate(-0deg);
+    }
+  }
+
+  .description {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    width: 350px;
+    height: 250px;
+    left:-50px;
+    top: 300px;
+    visibility: hidden;
+    opacity: 0;
+    text-align: justify;
+    cursor: text;
+
+
+  }
+
+  .fadeOut {
+    -webkit-animation-name: fadeOut;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-name: fadeOut;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-duration: 1s;
+  }
+
+  @-webkit-keyframes fadeOut {
+    from {
+      top: 275px;
+      visibility: visible;
+      opacity: 1;
+
+    }
+
+    to {
+      top: 300px;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  @-moz-keyframes fadeOut {
+    from {
+      top: 275px;
+      visibility: visible;
+      opacity: 1;
+
+    }
+
+    to {
+      top: 300px;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-name: fadeIn;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-delay: 0.5s;
+    -moz-animation-duration: 1s;
+  }
+
+
+  @-webkit-keyframes fadeIn {
+    from {
+
+      top: 300px;
+      visibility: hidden;
+      opacity: 0;
+
+    }
+
+    to {
+      top: 275px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    from {
+
+      top: 300px;
+      visibility: hidden;
+      opacity: 0;
+
+    }
+
+    to {
+      top: 275px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+
+
+
+}
+
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    html {
+      background: url("background-2048x2048.jpg") no-repeat center fixed;
+      background-color: #cccccc;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    #origin {
+      position: relative;
+      height: 600px;
+      width: 600px;
+      background-color: #cccccc;
+      margin: 200px auto;
+      border-radius: 300px;
+      background: url(headshotbw.png) no-repeat center;
+      background-size: 600px;
+      cursor:pointer;
+    }
+
+    .element {
       position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-
+      height: 400px;
+      width: 400px;
+      border-radius: 200px;
+      background-color: black;
+      left: 100px;
     }
 
-    .circular:hover {
-      width: 300px;
-      height: 300px;
+
+    .degree0 {
+      background: url(github.gif) no-repeat center;
+      background-size: 600px;
+      top: 2100px;
+    }
+
+    .degree45 {
+      background: url(linkedin.png) no-repeat center;
+      background-size: 600px;
+      top: 2800px;
+    }
+
+    .degree90 {
+      background: url(3.png) no-repeat center;
+      background-size: 600px;
+      top: 1400px;
+    }
+
+    .degree135 {
+      background: url(2.png) no-repeat center;
+      background-size: 600px;
+      top: 3500px;
+    }
+
+    .degree180 {
+      background: url(1.png) no-repeat center;
+      background-size: 600px;
+      top: 4200px;
+    }
 
 
+    .description {
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    width: 500px;
+    height: 250px;
+    left: 50px;
+    top: 700px;
+    visibility: visible;
+    opacity: 1;
+    text-align: justify;
+    cursor: text;
+
+  }
+
+  .caption {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    font-size: 60px;
+    top: 110%;
+    text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
     }
-    .col-md-4 {
-      height: 300px;
-    }
+
+
+
+
+  }
 
 
 
@@ -76,21 +506,14 @@
   </style>
 </head>
 <body>
-<h1></h1>
-  <div class="container">
-    <div class="row">
-      <!-- <div class="col-md-1"></div> -->
-      <div class="col-md-4 col-xs-12 col-md-offset-1 text-center vertical-center"><a href="http://tictactoe.gudeman.co/"><div id="ttt" class="circular"></div></a></div>
-      <!-- <div class="col-md-2"></div> -->
-      <div class="col-md-4 col-md-offset-2 col-xs-12 text-center vertical-center"><a href="http://thebestblogever.herokuapp.com/"><div id="tbbe" class="circular"></div></a></div>
-      <!-- <div class="col-md-1"></div> -->
-    </div>
-    <div class="row">
-      <!-- <div class="col-md-4"></div> -->
-      <div class="col-md-4 col-md-offset-4 col-xs-12 text-center vertical-center"><a href="resume.pdf"><div id="rsm" class="circular"></div></a></div>
-      <!-- <div class="col-md-4"></div> -->
-    </div>
-  </div>
+<div id="origin">
+  <a href="https://github.com/dcgudeman"><div class="element degree0"><div class="caption">GitHub</div></div></a>
+  <a href="https://www.linkedin.com/in/davidgudeman"><div class="element degree45"><div class="caption">LinkedIn</div></div></a>
+  <a href="resume.pdf"><div class="element degree90"><div class="caption">Resume</div></div></a>
+  <a href="http://thebestblogever.herokuapp.com/"><div class="element degree135"><div class="caption">TheBestBlogEver</div></div></a>
+  <a href="http://tictactoe.gudeman.co/"><div class="element degree180"><div class="caption"> Unbeatable<br>Tic-Tac-Toe</div></div></a>
+  <div class="description">Hi there, thanks for visiting my website. I'm a web developer located in Palo Alto. I work with Node.js and Ruby on Rails. I enjoy solving problems in elegant ways and following world politics. If you're in need of a web developer please reach out to me.</div>
+</div>
 
 
 </body>
